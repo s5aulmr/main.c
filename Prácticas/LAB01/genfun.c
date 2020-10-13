@@ -2,7 +2,7 @@
 #include "GENFUN.h"
 #include <stdlib.h>
 
-
+/*Nota 70*/
 void main ( void ) 
 {
     /*/  Minus to Mayus   /*/
@@ -179,12 +179,12 @@ uint8 GENFUN_u8GetAverage ( uint8 *pu8Src, uint8 u8SizeOfList )
 {
     
     uint8 u8Sum = 0;
-    uint8 Elements;
+    uint8 Elements;         /*Notacion hungara*/
     Elements = u8SizeOfList;
     while ( u8SizeOfList != 0 ) 
     {
 
-        u8Sum += *pu8Src;
+        u8Sum += *pu8Src;       /*Overflow*/
         *pu8Src++;
         u8SizeOfList--;
 
@@ -223,7 +223,7 @@ void GENFUN_vSortList (uint8 *pu8Src, uint8 *pu8Dest, uint8 u8SizeOfList)
 {
 
     uint8 i,j,x;
-    uint8 RefArray[13] = {0,0,0,0,0,0,0,0,0,0,0,0,0};
+    uint8 RefArray[13] = {0,0,0,0,0,0,0,0,0,0,0,0,0};       /*ciclo para 13 no para sizeoflist*/
 
     for(i=0;i<13;i++) 
     {
@@ -258,7 +258,7 @@ void GENFUN_vSortList (uint8 *pu8Src, uint8 *pu8Dest, uint8 u8SizeOfList)
 void GENFUN_vSoftSignal (uint8 *pu8Src, uint8 *pu8Dest) 
 {
 
-    uint8 i,j, Limit = 255;
+    uint8 i,j, Limit = 255;         /*notacion hungara*/
     while ( Limit > i ) 
     {
         i = *pu8Src; 
@@ -273,10 +273,10 @@ void GENFUN_vSoftSignal (uint8 *pu8Src, uint8 *pu8Dest)
 
 }
 
-void GENFUN_vFilterSignal (uint8 *pu8Src, uint8 *pu8Dest, uint8 u8MaxVal, uint8 u8MinVal) 
+void GENFUN_vFilterSignal (uint8 *pu8Src, uint8 *pu8Dest, uint8 u8MaxVal, uint8 u8MinVal) /*no usas parmetros*/
 {
 
-    uint8 a, b, Limit2=0;
+    uint8 a, b, Limit2=0;         /*notacion hungara*/
     while ( Limit2 < 255 ) 
     {
         
